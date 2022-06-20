@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.rickandmortyapp.screens.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="com.example.rickandmortyapp.screens.locations.LocationsFragment"
+        android:label="LocationsFragment" >
+        <action
+            android:id="@+id/action_locationsFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.example.rickandmortyapp.screens.episodes.EpisodesFragment"
+        android:label="EpisodesFragment" >
+        <action
+            android:id="@+id/action_episodesFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.rickandmortyapp.screens.characters.CharactersFragment"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_locations" >
+        <action
+            android:id="@+id/action_charactersFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+</navigation>

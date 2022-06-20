@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Rick and Morty App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="air_date">air date:</string>
+    <string name="season">season:</string>
+    <string name="episode">episode:</string>
+    <string name="type">type:</string>
+    <string name="dimension">dimension:</string>
+    <string name="characters">Персонажи</string>
+    <string name="locations">Локации</string>
+    <string name="episodes">Эпизоды</string>
+    <string name="Rick_and_Morty">The Rick and Morty</string>
+    <string name="back">Назад</string>
+    <string name="find">Поиск</string>
+    <string name="gender">gender</string>
+    <string name="species">species</string>
+    <string name="location">location</string>
+</resources>

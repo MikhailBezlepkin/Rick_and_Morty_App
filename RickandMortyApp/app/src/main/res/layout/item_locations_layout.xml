@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/location_name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anatomy park"
+            android:textColor="@color/mucus"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+
+        <TableRow>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/type"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/type_item"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Microverce"
+                android:textColor="@color/black" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dimension"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/dimension_item"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Dimension C-137"
+                android:textColor="@color/black" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</androidx.cardview.widget.CardView>
