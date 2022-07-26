@@ -5,16 +5,15 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.rickandmortyapp.R
-import com.example.rickandmortyapp.model.characters_model.Result
+import com.example.rickandmortyapp.model.characters_model.CharactersItem
 import kotlinx.android.synthetic.main.item_characters_layout.view.*
 
 class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharactersViewHolder>() {
 
-    var listCharacters = emptyList<Result>()
+    var listCharacters = emptyList<CharactersItem>()
 
     class CharactersViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
@@ -42,7 +41,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharactersViewH
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list: List<Result>) {
+    fun setList(list: List<CharactersItem>) {
         listCharacters = list
         notifyDataSetChanged()
     }

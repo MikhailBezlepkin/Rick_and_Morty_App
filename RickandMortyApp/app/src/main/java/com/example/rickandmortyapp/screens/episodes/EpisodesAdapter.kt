@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortyapp.R
-import com.example.rickandmortyapp.model.episodes_model.Episodes
 import com.example.rickandmortyapp.model.episodes_model.Result
 import kotlinx.android.synthetic.main.item_episodes_layout.view.*
 

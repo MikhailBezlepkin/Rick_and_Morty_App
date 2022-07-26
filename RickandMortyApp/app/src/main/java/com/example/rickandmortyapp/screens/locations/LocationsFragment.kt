@@ -5,15 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.contains
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.databinding.FragmentLocationsBinding
-import com.example.rickandmortyapp.screens.episodes.EpisodesAdapter
-import com.example.rickandmortyapp.screens.episodes.EpisodesViewModel
 import kotlinx.android.synthetic.main.fragment_episodes.view.*
 import kotlinx.android.synthetic.main.fragment_locations.*
+import okhttp3.internal.notifyAll
 
 
 class LocationsFragment : Fragment() {
@@ -48,6 +48,14 @@ class LocationsFragment : Fragment() {
         viewModel.myLocationsList.observe(viewLifecycleOwner
         ) { list ->
             adapter.setList(list)
+        }
+
+        binding.buttonFindLocation.setOnClickListener {
+            val list = viewModel.myLocationsList.value ?: emptyList()
+            val sortedList = list.filter { result->
+                result.name.contains(binding.editTextFindLocations.text.toString())
+                            }
+            adapter.setList(sortedList)
         }
 
     }

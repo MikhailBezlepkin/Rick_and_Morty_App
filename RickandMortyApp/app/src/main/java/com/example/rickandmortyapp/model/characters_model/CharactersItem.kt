@@ -1,6 +1,6 @@
 package com.example.rickandmortyapp.model.characters_model
 
-data class Result(
+data class CharactersItem(
     val created: String,
     val episode: List<String>,
     val gender: String,

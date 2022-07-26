@@ -41,9 +41,18 @@ class EpisodesFragment : Fragment() {
         adapter = EpisodesAdapter()
         recyclerView.adapter = adapter
         viewModel.getEpVM()
-        viewModel.myEpisodesList.observe(viewLifecycleOwner, {list->
-             adapter.setList(list) }
-         )
+        viewModel.myEpisodesList.observe(viewLifecycleOwner
+        ) { list ->
+            adapter.setList(list)
+        }
+
+        binding.buttonFindEpisode.setOnClickListener {
+            val list = viewModel.myEpisodesList.value ?: emptyList()
+            val sortedList = list.filter { result->
+                result.name.contains(binding.editTextFindEpisodes.text.toString())
+            }
+            adapter.setList(sortedList)
+        }
     }
 
     override fun onDestroyView() {

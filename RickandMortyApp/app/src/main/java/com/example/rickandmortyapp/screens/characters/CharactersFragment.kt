@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.databinding.FragmentCharactersBinding
-import com.example.rickandmortyapp.model.characters_model.Result
 
 
 class CharactersFragment : Fragment() {
@@ -45,9 +43,18 @@ lateinit var adapter: CharactersAdapter
         adapter = CharactersAdapter()
         recyclerView.adapter = adapter
         viewModel.getCharVM()
-        viewModel.myCharactersList.observe(viewLifecycleOwner, {list->
-            adapter.setList(list) }
-        )
+        viewModel.myCharactersList.observe(viewLifecycleOwner
+        ) { list ->
+            adapter.setList(list)
+        }
+
+        binding.buttonFindCharacter.setOnClickListener {
+            val list = viewModel.myCharactersList.value ?: emptyList()
+            val sortedList = list.filter { result ->
+                result.name.contains(binding.editTextFindCharacters.text.toString())
+            }
+            adapter.setList(sortedList)
+        }
 
 
     }

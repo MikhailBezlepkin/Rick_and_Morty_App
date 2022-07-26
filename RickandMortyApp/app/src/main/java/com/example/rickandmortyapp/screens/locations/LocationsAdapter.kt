@@ -36,5 +36,14 @@ class LocationsAdapter:RecyclerView.Adapter<LocationsAdapter.LocationsViewHolder
     fun setList(list:List<Result>){
         listLocations=list
         notifyDataSetChanged()
+
+    }
+
+
+    fun updateItem(position: Int, result:Result){
+        val mutableList=listLocations.toMutableList()
+mutableList[position] = result
+        listLocations = mutableList
+        notifyItemChanged(position)
     }
 }
