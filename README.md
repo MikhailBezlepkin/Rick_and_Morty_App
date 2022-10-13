@@ -1,5 +1,5 @@
 # Rick and Morty App
-This app using The [Rick and Morty API](https://rickandmortyapi.com/) and written in Kotlin with Android Studio. Here Pexels API documentation.
+This app using The [Rick and Morty API](https://rickandmortyapi.com/) and written in Kotlin with Android Studio.
 ***
 ## Rick and Morty app staсk:
 * Using Retrofit for fetching data from Rick and Morty API;
