@@ -18,9 +18,7 @@ This app using the [Rick and Morty API](https://rickandmortyapi.com/) and writte
 ![](https://github.com/MikhailBezlepkin/Screenshots/blob/main/RaMLoc.png)
 ![](https://github.com/MikhailBezlepkin/Screenshots/blob/main/RaMEp.png)
 
-***
-
-Pressing the "Назад" button will return you to the start screen.
+* Pressing the "Назад" button will return you to the start screen.
 And by entering text in the search bar and clicking the "Поиск" button, you can run a query and sort the received data
 
 
